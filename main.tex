@@ -1,0 +1,110 @@
+\documentclass[14pt, oneside]{altsu-report}
+
+\worktype{Отчёт по практике на тему:}
+\title{Лабиринт}
+\author{В.\,А.~Суслова}
+\groupnumber{5.205-1}
+\GradebookNumber{1337}
+\supervisor{И.\,А.~Шмаков}
+\supervisordegree{}
+\ministry{Министерство науки и высшего образования}
+\country{Российской Федерации}
+\fulluniversityname{ФГБОУ ВО Алтайский государственный университет}
+\institute{Институт цифровых технологий, электроники и физики}
+\department{Кафедра вычислительной техники и электроники}
+\departmentchief{В.\,В.~Пашнев}
+\departmentchiefdegree{к.ф.-м.н., доцент}
+\shortdepartment{ВТиЭ}
+\abstractRU{Проект по дисциплине "Проекто-технологическая практика" на тему "Лабиринт".
+\par Работа изложена на *** страницах машинописного текста.
+\par Краткое содержание работы. Данная работа посвящена разработке, тестировке игры "Лабиринт".}
+\abstractEN{A project on the discipline "Design and technological practice" on the theme "Labyrinth".
+\par The work is presented on *** pages of typewritten text.
+\par Summary of the work. This work is devoted to the development and testing of the game "Labyrinth"}
+\keysRU{компьютерное моделирование, cистема управления версиями}
+\keysEN{computer simulation, distributed version control}
+
+\date{\the\year}
+
+% Подключение файлов с библиотекой.
+\addbibresource{graduate-students.bib}
+
+% Пакет для отладки отступов.
+%\usepackage{showframe}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+\makeabstract
+\tableofcontents
+
+\chapter*{Введение}
+\phantomsection\addcontentsline{toc}{chapter}{ВВЕДЕНИЕ}
+
+\textbf{Актуальностью} темы состоит в том, что в настоящее время разработка игр является развивающейся областью информационных технологий и изучение опыта создания игр может быть полезно для разработки новых проектов.
+
+\textbf{Целью} данного исследования является разработка и создание интересной игры "Лабиринт", освоение технологии программирования.
+
+\par Для достижения цели были поставлены следующие \textbf{задачи:}
+\begin{enumerate}
+\item Изучить основные принципы и методы создания компьютерных игр;
+\item Разработать дизайн и концепцию игры "Лабиринт";
+\item Реализовать основные игровые механики;
+\item Осуществить программировани игры на языке Python;
+\item Разработать интерфейс и графическое оформление;
+\item Протестировать игру и исправить возможные ошибки.
+\end{enumerate}
+
+\chapter*{Глава 1. }
+\phantomsection\addcontentsline{toc}{chapter}{ГЛАВА 1}
+% Подключение первой главы (теория):
+\include{chapter-1-report-csae.tex}
+
+\chapter*{Глава 2. }
+\phantomsection\addcontentsline{toc}{chapter}{ГЛАВА 2}
+% Подключение второй главы (практическая часть):
+\include{chapter-2-report-csae.tex}
+
+\chapter*{Глава 3. Тестирование игры}
+\phantomsection\addcontentsline{toc}{chapter}{ГЛАВА 3. тЕСТИРОВАНИЕ ИГРЫ}
+% Подключение третий главы (практическая часть с тестированием:
+\include{chapter-3-report-csae.tex}
+
+\chapter*{Заключение}
+\phantomsection\addcontentsline{toc}{chapter}{ЗАКЛЮЧЕНИЕ}
+
+\chapter*{Список использованной литературы}
+
+\begin{enumerate}
+\item \title = {Буйначев С.К., Боклаг Н. Ю. Основы программирования на языке Python. — Екатеринбург: <<Издательско-полиграфический центр УрФУ>>, 2014. — 91 с.}
+\item \title = {Болотский А.В. Математическое программирование и теория игр. — Санкт-Петербург: <<Лань>>, 2022. — 116 с.}
+\item \title = {Роберт Нистрем Паттерны программирования игр. — Москва: <<БОМБОРА>>, 2022. — 432 с.}
+\item \title = {Эрик Мэтиз Изучаем Python: программирование игр, визуализация данных, веб-приложения. — Санкт-Петербург: <<Питер>>, 2020. — 512 с.}
+\item \title = {Мэтт Харрисон Как устроен Python. Гид для разработчиков, программистов и интересующихся. — Санкт-Петербург: <<Питер>>, 2019. — 272 с.}
+\end{enumerate}
+
+\newpage
+\phantomsection\addcontentsline{toc}{chapter}{СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ}
+
+\printbibliography[title={Список использованной литературы}]
+
+
+\appendix
+\newpage
+\chapter*{\raggedleft\label{appendix1}Приложение}
+\phantomsection\addcontentsline{toc}{chapter}{ПРИЛОЖЕНИЕ}
+%\section*{\centering\label{code:appendix}Текст программы}
+
+\begin{center}
+\label{code:appendix}Текст программы
+\end{center}
+
+\begin{code}
+\captionof*{listing}{\centering\label{code:pi-example}Пример программы вычисления числа $\pi$ на языке \textit{C} с использованием \textit{MPI} (пример из https://ru.wikipedia
+.org/wiki/Message\_Passing\_Interface)}
+\vspace{-1cm}\inputminted{C}{src/pi-mpi.c}
+\end{code}
+
+\end{document}
+
